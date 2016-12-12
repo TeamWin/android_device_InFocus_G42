@@ -1,0 +1,1 @@
+# android_device_InFocus_G42
