@@ -8,7 +8,7 @@ This branch is device for building of the LineageOS 14.1 and Android Nougat 7.1.
 # About Device
 
 InFocus M680(G42)
-![InFocus M680](http://http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2015/12/infocus-m680-featured.jpg "InFocus M680")
+![InFocus M680](http://img01.ibnlive.in/ibnlive/uploads/875x584/jpg/2015/12/infocus-m680-featured.jpg "InFocus M680")
 
 ### Specifications
 
