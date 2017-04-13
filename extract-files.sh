@@ -1,22 +1,17 @@
+#!/bin/bash
 
-#/bin/sh
+VENDOR=InFocus
+DEVICE=G42
 
-UPDATE_PACKAGE=update.zip
+BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
-if [ "x$UPDATE_PACKAGE" = "x" ]; then
-    echo You must specify the update.zip as first argument
-    exit
-fi
-
-BASE=../../../vendor/InFocus/G42/proprietary
-rm -rf $BASE/*
-
-for FILE in `egrep -v '(^#|^$)' proprietary-blobs.txt`; do
-  DIR=`dirname $FILE`
-  if [ ! -d $BASE/$DIR ]; then
-    mkdir -p $BASE/$DIR
-  fi
-  unzip -j -o ${UPDATE_PACKAGE} system/$FILE -d $BASE/$DIR
+echo "Pulling $DEVICE files..."
+for FILE in `cat proprietary-blobs.txt | grep -v ^# | grep -v ^$`; do
+    DIR=`dirname $FILE`
+    if [ ! -d $BASE/$DIR ]; then
+        mkdir -p $BASE/$DIR
+    fi
+    adb pull /system/$FILE $BASE/$FILE
 done
 
 ./setup-makefiles.sh
