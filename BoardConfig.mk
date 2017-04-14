@@ -24,7 +24,6 @@ include $(LOCAL_PATH)/board/*.mk
 -include vendor/InFocus/G42/BoardConfigVendor.mk
 
 #######################################################################
-
 # Kernel
 TARGET_KMODULES := true
 BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
@@ -43,18 +42,8 @@ BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Audio Server
-TARGET_PROVIDES_AUDIOSERVER_RC := true
-
-# init
-TARGET_PROVIDES_INIT_RC := true
-
-
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
-# Include
-TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile
