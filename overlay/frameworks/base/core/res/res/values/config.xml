@@ -112,15 +112,19 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">71</integer>
 
+    <!-- Volte -->
+    <integer name="config_volte_replacement_rat">0</integer>
+    
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
+
     <bool name="config_lidControlsSleep">true</bool>
 
     <bool name="config_wifi_background_scan_support">true</bool>
 
     <!-- Wifi DualBand -->
-    <bool name="config_wifi_dual_band_support">true</bool>
+    <bool name="config_wifi_dual_band_support">false</bool>
 
     <!-- Configuration to restart radio upon PDP_DEACTIVATE with
          error cause as Regular deactivation(36). -->
@@ -192,4 +196,7 @@
     <bool name="config_nightDisplayAvailable">true</bool>
 
     <bool name="config_supportDoubleTapWake">true</bool>
+    
+    <!-- Volte -->
+    <bool name="config_device_volte_available">false</bool>
 </resources>
